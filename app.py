@@ -8,8 +8,9 @@ app = Flask(__name__)
 CORS(app)  # разрешаем запросы с другого домена (GitHub Pages)
 app.json.ensure_ascii = False  # чтобы русский текст в ответах был читаемым
  
-SUPABASE_URL = os.environ.get("https://uhtlzmisbpkcaptdzweu.supabase.co")
-SUPABASE_KEY = os.environ.get("sb_publishable_U8HfeGtDOXmlbK2u8R_E2Q_wL1GMWm6")
+SUPABASE_URL = os.environ.get("SUPABASE_URL")
+SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
+
  
 supabase = None
 if SUPABASE_URL and SUPABASE_KEY:
